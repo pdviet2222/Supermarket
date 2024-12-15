@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Quản lý kho hàng</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="quanlykhohang.css">
+</head>
+<body>
+  <h1>Quản lý kho hàng</h1>
+  <table id="kho">
+    <tr>
+      <th onclick="sortTable(0)">Mã mặt hàng</th>
+      <th onclick="sortTable(1)">Tên mặt hàng</th>
+      <th onclick="sortTable(2)">Số lượng tồn</th>
+      <th onclick="sortTable(3)">Số lượng cần</th>
+      <th onclick="sortTable(4)">Trạng thái</th>
+    </tr>
+    <tr>
+      <td>MH001</td>
+      <td>Bánh Chocopie</td>
+      <td>100</td>
+      <td>150</td>
+      <td>Thiếu</td>
+    </tr>
+    <tr>
+      <td>MH002</td>
+      <td>Bánh goute</td>
+      <td>200</td>
+      <td>100</td>
+      <td>Dư</td>
+    </tr>
+    <tr>
+      <td>MH003</td>
+      <td>Bánh opera</td>
+      <td>500</td>
+      <td>500</td>
+      <td>Đủ</td>
+    </tr>
+  </table>
+  <p>Tìm kiếm mặt hàng: <input type="text" id="search" onkeyup="searchTable()"></p>
+  <script src="quanlykho.js"></script>
+</body>
+</html>

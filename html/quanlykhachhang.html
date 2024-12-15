@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý khách hàng</title>
+    <link rel="stylesheet" href="quanlykhachhang.css">
+</head>
+<body>
+    <h1>Quản lý khách hàng</h1>
+    <p>Chào mừng bạn đến với trang quản lý khách hàng. Bạn có thể thêm, sửa, xóa, và xem thông tin của các khách hàng.</p>
+    <div class="add">
+        <h2>Thêm khách hàng mới</h2>
+        <form action="add.php" method="POST">
+            <p>Mã khách hàng: <input type="text" name="makhachhang" required></p>
+            <p>Tên khách hàng: <input type="text" name="tenkhachhang" required></p>
+            <p>Địa chỉ: <input type="text" name="diachi" required></p>
+            <p>Số điện thoại: <input type="text" name="sodienthoai" required></p>
+            <p>Email: <input type="email" name="email" required></p>
+            <p><input type="submit" value="Thêm"></p>
+        </form>
+    </div>
+    <div class="edit">
+        <h2>Sửa thông tin khách hàng</h2>
+        <form action="edit.php" method="POST">
+            <p>Mã khách hàng: <input type="text" name="makhachhang" required></p>
+            <p>Tên khách hàng: <input type="text" name="tenkhachhang" required></p>
+            <p>Địa chỉ: <input type="text" name="diachi" required></p>
+            <p>Số điện thoại: <input type="text" name="sodienthoai" required></p>
+            <p>Email: <input type="email" name="email" required></p>
+            <p><input type="submit" value="Sửa"></p>
+        </form>
+    </div>
+    <div class="delete">
+        <h2>Xóa khách hàng</h2>
+        <form action="delete.php" method="POST">
+            <p>Mã khách hàng: <input type="text" name="makhachhang" required></p>
+            <p><input type="submit" value="Xóa"></p>
+        </form>
+    </div>
+    <div class="view">
+        <h2>Xem thông tin khách hàng</h2>
+        <table>
+            <tr>
+                <th>Mã khách hàng</th>
+                <th>Tên khách hàng</th>
+                <th>Địa chỉ</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>KH001</td>
+                <td>Nguyễn Văn A</td>
+                <td>12 Nguyễn Trãi, Hà Nội</td>
+                <td>0987654321</td>
+                <td>nguyenvana@gmail.com</td>
+            </tr>
+            <tr>
+                <td>KH002</td>
+                <td>Trần Thị B</td>
+                <td>34 Lê Lợi, Đà Nẵng</td>
+                <td>0123456789</td>
+                <td>tranb@gmail.com</td>
+            </tr>
+            <tr>
+                <td>KH003</td>
+                <td>Lê Văn C</td>
+                <td>56 Trần Hưng Đạo, TP.HCM</td>
+                <td>0912345678</td>
+                <td>levanc@gmail.com</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

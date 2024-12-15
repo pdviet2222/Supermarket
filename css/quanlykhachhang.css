@@ -1,0 +1,100 @@
+/* Đây là một file css đơn giản cho file html về quản lý khách hàng */
+
+/* Định dạng cho phần tử body */
+body {
+    font-family: Arial, sans-serif; /* Sử dụng font chữ Arial hoặc một font chữ không có serifs khác */
+    background-color: lightgray; /* Đặt màu nền là màu xám nhạt */
+  }
+  
+  /* Định dạng cho phần tử h1 */
+  h1 {
+    color: green; /* Đặt màu chữ là màu xanh lá */
+    text-align: center; /* Căn giữa chữ */
+    border-bottom: 2px solid black; /* Thêm một đường viền dưới màu đen, độ dày 2px */
+    padding: 10px; /* Thêm một khoảng đệm 10px xung quanh chữ */
+    font-size: 2em; /* Đặt cỡ chữ là 2 lần cỡ chữ mặc định */
+  }
+  
+  /* Định dạng cho phần tử p */
+  p {
+    color: blue; /* Đặt màu chữ là màu xanh dương */
+    margin: 20px; /* Thêm một khoảng cách 20px xung quanh đoạn văn */
+  }
+  
+  /* Định dạng cho phần tử h2 */
+  h2 {
+    color: navy; /* Đặt màu chữ là màu xanh dương */
+    font-weight: bold; /* Đặt chữ đậm */
+  }
+  
+  /* Định dạng cho phần tử .add */
+  .add {
+    background-color: lightgreen; /* Đặt màu nền là màu xanh lá nhạt */
+    margin: 10px; /* Thêm một khoảng cách 10px xung quanh nội dung */
+    padding: 10px; /* Thêm một khoảng đệm 10px xung quanh nội dung */
+    display: flex; /* Sử dụng bố cục linh hoạt */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+    justify-content: center; /* Căn chỉnh các phần tử theo chiều ngang */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  }
+  
+  /* Định dạng cho phần tử .edit */
+  .edit {
+    background-color: lightblue; /* Đặt màu nền là màu xanh dương nhạt */
+    margin: 10px; /* Thêm một khoảng cách 10px xung quanh nội dung */
+    padding: 10px; /* Thêm một khoảng đệm 10px xung quanh nội dung */
+    display: flex; /* Sử dụng bố cục linh hoạt */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+    justify-content: center; /* Căn chỉnh các phần tử theo chiều ngang */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  }
+  
+  /* Định dạng cho phần tử .delete */
+  .delete {
+    background-color: lightpink; /* Đặt màu nền là màu hồng nhạt */
+    margin: 10px; /* Thêm một khoảng cách 10px xung quanh nội dung */
+    padding: 10px; /* Thêm một khoảng đệm 10px xung quanh nội dung */
+    display: flex; /* Sử dụng bố cục linh hoạt */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+    justify-content: center; /* Căn chỉnh các phần tử theo chiều ngang */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  }
+  
+  /* Định dạng cho phần tử .view */
+  .view {
+    background-color: lightyellow; /* Đặt màu nền là màu vàng nhạt */
+    margin: 10px; /* Thêm một khoảng cách 10px xung quanh nội dung */
+    padding: 10px; /* Thêm một khoảng đệm 10px xung quanh nội dung */
+  }
+  
+  /* Định dạng cho phần tử table */
+  table {
+    border-collapse: collapse; /* Bỏ khoảng cách giữa các ô */
+    width: 100%; /* Đặt chiều rộng của bảng bằng 100% chiều rộng của trình duyệt */
+  }
+  
+  /* Định dạng cho phần tử th */
+  th {
+    background-color: green; /* Đặt màu nền là màu xanh lá */
+    color: white; /* Đặt màu chữ là màu trắng */
+    border: 1px solid black; /* Thêm một đường viền xung quanh mỗi ô, màu đen, độ dày 1px */
+    padding: 5px; /* Thêm một khoảng đệm 5px xung quanh mỗi ô */
+  }
+  
+  /* Định dạng cho phần tử td */
+  td {
+    border: 1px solid black; /* Thêm một đường viền xung quanh mỗi ô, màu đen, độ dày 1px */
+    padding: 5px; /* Thêm một khoảng đệm 5px xung quanh mỗi ô */
+  }
+  
+  /* Định dạng cho phần tử input */
+  input {
+    margin: 5px; /* Thêm một khoảng cách 5px xung quanh mỗi ô nhập */
+  }
+  
+  /* Định dạng cho nút gửi */
+  input[type="submit"] {
+    background-color: green; /* Đặt màu nền là màu xanh lá */
+    color: white; /* Đặt màu chữ là màu trắng */
+    border: none;
+  }

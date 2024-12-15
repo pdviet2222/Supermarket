@@ -1,0 +1,87 @@
+/* Đây là một file css đơn giản cho file html về hệ thống siêu thị */
+
+/* Định dạng cho phần tử body */
+body {
+    font-family: Arial, sans-serif; /* Sử dụng font chữ Arial hoặc một font chữ không có serifs khác */
+    background-color: lightgray; /* Đặt màu nền là màu xám nhạt */
+  }
+  
+  /* Định dạng cho phần tử h1 */
+  h1 {
+    color: green; /* Đặt màu chữ là màu xanh lá */
+    text-align: center; /* Căn giữa chữ */
+    border-bottom: 2px solid black; /* Thêm một đường viền dưới màu đen, độ dày 2px */
+    padding: 10px; /* Thêm một khoảng đệm 10px xung quanh chữ */
+  }
+  
+  /* Định dạng cho phần tử p */
+  p {
+    color: blue; /* Đặt màu chữ là màu xanh dương */
+    margin: 20px; /* Thêm một khoảng cách 20px xung quanh đoạn văn */
+  }
+  
+  /* Định dạng cho phần tử span */
+  span {
+    font-weight: bold; /* Đặt chữ đậm */
+    font-style: italic; /* Đặt chữ nghiêng */
+  }
+  
+  /* Định dạng cho phần tử a */
+  a {
+    color: red; /* Đặt màu chữ là màu đỏ */
+    text-decoration: none; /* Bỏ gạch chân */
+  }
+  
+  /* Định dạng cho phần tử em */
+  em {
+    color: purple; /* Đặt màu chữ là màu tím */
+    font-size: 1.2em; /* Đặt cỡ chữ là 1.2 lần cỡ chữ mặc định */
+  }
+  
+  /* Định dạng cho phần tử ul */
+  ul {
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+    margin: 0; /* Bỏ khoảng cách xung quanh danh sách */
+    padding: 0; /* Bỏ đệm xung quanh danh sách */
+  }
+  
+  /* Định dạng cho phần tử li */
+  li {
+    background-color: yellow; /* Đặt màu nền là màu vàng */
+    margin: 10px; /* Thêm một khoảng cách 10px xung quanh mỗi mục */
+    padding: 10px; /* Thêm một khoảng đệm 10px xung quanh mỗi mục */
+  }
+  
+  /* Định dạng cho phần tử input */
+  input {
+    margin: 5px; /* Thêm một khoảng cách 5px xung quanh mỗi ô nhập */
+  }
+  
+  /* Định dạng cho nút gửi */
+  input[type="submit"] {
+    background-color: green; /* Đặt màu nền là màu xanh lá */
+    color: white; /* Đặt màu chữ là màu trắng */
+    border: none; /* Bỏ viền */
+    padding: 10px; /* Thêm một khoảng đệm 10px xung quanh nút */
+    cursor: pointer; /* Đổi con trỏ thành hình bàn tay khi di chuyển qua nút */
+  }
+  
+  /* Định dạng cho nút gửi khi được rê chuột qua */
+  input[type="submit"]:hover {
+    background-color: darkgreen; /* Đổi màu nền thành màu xanh lá đậm */
+  }
+  
+  /* Điều chỉnh chiều dài và chiều rộng của các thanh màu vàng */
+  .yellow-bar {
+    width: 60%; /* Điều chỉnh chiều rộng */
+    height: 80px; /* Điều chỉnh chiều cao */
+  }
+  
+  /* Giảm khoảng cách giữa hai thanh màu vàng */
+  .space-between {
+    margin-bottom: 20px; /* Điều chỉnh khoảng cách */
+  }
+
+  body {
+    text-align: center;
+  }

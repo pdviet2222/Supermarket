@@ -1,0 +1,56 @@
+/* Định dạng tiêu đề trang web */
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  color: white;
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Định dạng các nhãn cho các ô nhập liệu */
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Định dạng các ô nhập liệu */
+input {
+  width: 200px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Định dạng bảng hoá đơn */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Định dạng các tiêu đề cột của bảng */
+th {
+  background-color: #eee;
+  padding: 5px;
+}
+
+/* Định dạng các ô của bảng */
+td {
+  padding: 5px;
+  text-align: right;
+}
+
+/* Định dạng hộp nhỏ hiển thị tổng tiền và tiền thừa */
+.card {
+  width: 300px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #999;
+}
+
+/* Định dạng nội dung của hộp nhỏ */
+.card-body {
+  padding: 10px;
+}

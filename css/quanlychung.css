@@ -1,0 +1,153 @@
+/* Định dạng cho toàn bộ trang web */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Định dạng cho phần container */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Định dạng cho phần header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  /* Định dạng cho phần logo */
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Định dạng cho phần name */
+  .name {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .header {
+    background-color: rgb(255, 22, 22);
+  }
+  
+  /* Định dạng cho phần contact */
+  .contact {
+    font-size: 16px;
+    color: black;
+  }
+  
+  /* Định dạng cho phần navigation */
+  .navigation {
+    background-color: #333;
+    text-align:center;
+  }
+  
+  .navigation ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navigation ul li {
+    padding: 10px;
+  }
+  
+  .navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navigation ul li a:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Định dạng cho phần content */
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  
+  /* Định dạng cho phần add, edit, delete, view */
+  .add, .edit, .delete, .view {
+    width: 48%;
+    margin: 1%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Định dạng cho các tiêu đề h1, h2 */
+  .content h1, .content h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Định dạng cho các đoạn văn bản p */
+  .content p {
+    margin: 10px 0;
+  }
+  
+  /* Định dạng cho các thẻ input */
+  .content input {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Định dạng cho các nút button */
+  .content button {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .content button:hover {
+    background-color: #666;
+  }
+  
+  /* Định dạng cho bảng table */
+  .content table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Định dạng cho các hàng tr */
+  .content table tr {
+    border: 1px solid #ccc;
+  }
+  
+  /* Định dạng cho các ô td */
+  .content table td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Định dạng cho các hình ảnh trong bảng */
+  .content table td img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  /* Định dạng cho phần sidebar */
+  .sidebar {
+    width: 20%;
+    margin: 1%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Thêm các thư viện bootstrap và jquery -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="quanlydoanhthu.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Trang web quầy thu ngân</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Bảng phía trên hiển thị thông tin khách hàng và mã giảm giá -->
+        <table class="table table-bordered">
+          <tr>
+            <td>Tên khách hàng:</td>
+            <td><input type="text" id="name" name="name"></td>
+          </tr>
+          <tr>
+            <td>Số điện thoại:</td>
+            <td><input type="text" id="phone" name="phone"></td>
+          </tr>
+          <tr>
+            <td>Mã giảm giá:</td>
+            <td><input type="text" id="coupon" name="coupon" oninput="applyCoupon()"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <!-- Ô nhập tên hàng để hiển thị xuống bảng danh sách đơn hàng -->
+        <label for="item">Tên mặt hàng:</label>
+        <input type="text" id="item" name="item" oninput="showItem()">
+        <!-- Ô hiển thị cảnh báo nếu tên mặt hàng trùng -->
+        <p id="alert" style="color: red;"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Bảng list danh sách hoá đơn mặt hàng khách mua -->
+        <table class="table table-bordered" id="invoice">
+          <thead>
+            <tr>
+              <th>Mã mặt hàng</th>
+              <th>Tên mặt hàng</th>
+              <th>Số lượng</th>
+              <th>Giá tiền</th>
+              <th>Thành tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Các dòng sẽ được thêm vào bằng jquery -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    var products = {
+      "Bánh mì": {code: "BM01", price: 10000},
+      "Nước ngọt": {code: "NN02", price: 15000},
+      "Kẹo": {code: "KE03", price: 5000},
+      "Sữa": {code: "SU04", price: 20000},
+      "Trà": {code: "TA05", price: 10000}
+    };
+
+    var coupons = {
+      "VIP10": 0.1, // Giảm 10%
+      "VIP20": 0.2, // Giảm 20%
+      "VIP30": 0.3 // Giảm 30%
+    };
+
+    var subtotal = 0;
+
+    var total = 0;
+
+    function showItem() {
+      var item = document.getElementById("item").value;
+
+      if (products[item]) {
+        if ($("#invoice tbody td:contains('" + item + "')").length > 0) {
+          $("#alert").text("Đã có tên hàng này rồi!");
+        } else {
+          var row = "<tr><td>" + products[item].code + "</td><td>" + item + "</td><td><input type='number' class='quantity' value='1' min='1' oninput='updateSubtotal()'></td><td>" + products[item].price + "</td><td class='amount'>" + products[item].price + "</td></tr>";
+          $("#invoice tbody").append(row);
+          subtotal += products[item].price;
+          $("#subtotal").text(subtotal);
+          total = subtotal * (1 - getCouponRate());
+          $("#total").text(total);
+          $("#alert").text("");
+        }
+        document.getElementById("item").value = "";
+      }
+    }
+    function updateSubtotal() {
+      var quantities = document.getElementsByClassName("quantity");
+      var amounts = document.getElementsByClassName("amount");
+
+      subtotal = 0;
+      for (var i = 0; i < quantities.length; i++) {
+        var quantity = quantities[i].value;
+        var price = amounts[i].innerHTML / quantity;
+        var amount = quantity * price;
+        amounts[i].innerHTML = amount;
+        subtotal += amount;
+      }
+      $("#subtotal").text(subtotal);
+      total = subtotal * (1 - getCouponRate());
+      $("#total").text(total);
+    }
+
+    // Một hàm để lấy tỷ lệ giảm giá từ mã giảm giá
+    function getCouponRate() {
+      // Lấy giá trị của ô mã giảm giá
+      var coupon = document.getElementById("coupon").value;
+
+      // Kiểm tra xem mã giảm giá có tồn tại trong đối tượng coupons hay không
+      if (coupons[coupon]) {
+        // Nếu có, trả về tỷ lệ giảm giá
+        return coupons[coupon];
+      } else {
+        // Nếu không, trả về 0
+        return 0;
+      }
+    }
+
+    // Một hàm để áp dụng mã giảm giá khi nhập vào ô
+    function applyCoupon() {
+      // Cập nhật tổng tiền sau khi kết hợp với mã giảm giá
+      total = subtotal * (1 - getCouponRate());
+      $("#total").text(total);
+    }
+
+    // Một hàm để tính toán tiền thừa khi khách trả
+    function calculateChange() {
+      // Lấy giá trị của ô tiền khách trả
+      var paid = document.getElementById("paid").value;
+
+      // Tính toán tiền thừa
+      var change = paid - total;
+
+      // Hiển thị tiền thừa
+      $("#change").text(change);
+    }
+  </script>
+</body>
+</html>

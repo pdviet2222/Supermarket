@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+  }
+
+  .search input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .search button {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 20px 0;
+  }
+
+  .product {
+    border: 1px solid #c7c4c4;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .product p {
+    font-size: 16px;
+    color: #000000;
+  }
+
+  .product button {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+
+  .cart h3 {
+    font-size: 20px;
+  }
+
+  .cart button {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+.tacgia {
+    background-color: black;
+    color: #ffff;
+}
+
+body {
+    background-color: #a5915c;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.search button::before {
+  content: "\1F50D"; /* Unicode for magnifying glass icon */
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  padding: 10px;
+}

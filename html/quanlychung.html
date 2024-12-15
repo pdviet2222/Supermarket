@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Quản lý bán hàng siêu thị</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="quanlychung.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo"><img src="logo.png" alt="Logo siêu thị"></div>
+      <div class="name">Siêu thị Minh Cầu</div>
+      <div class="contact">Hotline: 0975.286.999 - Email: cskh.minhcaumart@gmail.com</div>
+    </div>
+    <div class="navigation">
+      <ul>
+        <li><a href="trangchu.html">Trang chủ</a></li>
+        <li><a href="shopbanhang.html">Shop bán hàng<a></li>
+        <li><a href="quanlykhohang.html">Quản lý kho hàng</a></li>
+        <li><a href="quanlykhachhang.html">Quản lý khách hàng</a></li>
+        <li><a href="quanlydoanhthu.html">Quản lý doanh thu</a></li>
+        <li><a href="trangchu.html">Đăng xuất</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>Quản lý mặt hàng</h1>
+      <div class="add">
+        <h2>Thêm mặt hàng mới</h2>
+        <form>
+          <p>Mã mặt hàng: <input type="text" name="mamathang"></p>
+          <p>Tên mặt hàng: <input type="text" name="tenmathang"></p>
+          <p>Loại mặt hàng: <input type="text" name="loaimathang"></p>
+          <p>Đơn vị tính: <input type="text" name="donvitinh"></p>
+          <p>Giá bán: <input type="number" name="giaban"></p>
+          <p>Số lượng tồn: <input type="number" name="soluongton"></p>
+          <p>Hình ảnh: <input type="file" name="hinhanh"></p>
+          <p><button type="submit">Thêm</button></p>
+        </form>
+      </div>
+      <div class="edit">
+        <h2>Sửa thông tin mặt hàng</h2>
+        <form>
+          <p>Mã mặt hàng: <input type="text" name="mamathang"></p>
+          <p>Tên mặt hàng: <input type="text" name="tenmathang"></p>
+          <p>Loại mặt hàng: <input type="text" name="loaimathang"></p>
+          <p>Đơn vị tính: <input type="text" name="donvitinh"></p>
+          <p>Giá bán: <input type="number" name="giaban"></p>
+          <p>Số lượng tồn: <input type="number" name="soluongton"></p>
+          <p>Hình ảnh: <input type="file" name="hinhanh"></p>
+          <p><button type="submit">Sửa</button></p>
+        </form>
+      </div>
+      <div class="delete">
+        <h2>Xóa mặt hàng</h2>
+        <form>
+          <p>Mã mặt hàng: <input type="text" name="mamathang"></p>
+          <p><button type="submit">Xóa</button></p>
+        </form>
+      </div>
+      <div class="view">
+        <h2>Xem thông tin mặt hàng</h2>
+        <table>
+          <tr>
+            <th>Mã mặt hàng</th>
+            <th>Tên mặt hàng</th>
+            <th>Loại mặt hàng</th>
+            <th>Đơn vị tính</th>
+            <th>Giá bán</th>
+            <th>Số lượng tồn</th>
+            <th>Hình ảnh</th>
+          </tr>
+          <tr>
+            <td>MH001</td>
+            <td>Bánh chocopie</td>
+            <td>Bánh kẹo</td>
+            <td>Hộp</td>
+            <td>50.000đ</td>
+            <td>100</td>
+            <td><img src="ccp.webp" alt="Bánh Chocopie"></td>
+          </tr>
+          <tr>
+            <td>MH002</td>
+            <td>Bánh goute</td>
+            <td>Bánh kẹo</td>
+            <td>Hộp</td>
+            <td>90.000đ</td>
+            <td>200</td>
+            <td><img src="goute.webp" alt="Bánh goute"></td>
+          </tr>
+          <tr>
+            <td>MH003</td>
+            <td>Bánh opera</td>
+            <td>Bánh kẹo</td>
+            <td>Hộp</td>
+            <td>48.000đ</td>
+            <td>500</td>
+            <td><img src="opera.webp" alt="Bánh opera"></td>
+          </tr>
+        </table>
+        </div>
+    </body>
+</html>
+
